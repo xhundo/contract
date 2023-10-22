@@ -17,8 +17,9 @@ contract StorageFactory {
     }
 
     function sfStore(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public {
-        // in order to interact with the contact 
-        // (address/ABI: Application Binary Interface
+        // in order to interact with the contact:
+        // need: address/ABI
+        // (address/ABI: Application Binary Interface)
         SimpleStorage simpleStorage = simpleStorageArray[_simpleStorageIndex];
         simpleStorage.store(_simpleStorageNumber);
     }
