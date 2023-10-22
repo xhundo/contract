@@ -52,12 +52,13 @@ contract SimpleStorage {
         string  name;
     }
 
-    function store(uint256 _favoriteNumber) public {
+    // adding virtual specifier means method can be overridden
+    function store(uint256 _favoriteNumber) public virtual {
         favoriteNumber = _favoriteNumber;
         retrieve();
     }
 
-    // view/pure functions 
+    // view/pure functions: (you can only read with view) ** no gas fee
     function retrieve() public view returns(uint256) {
         return favoriteNumber;
     }
