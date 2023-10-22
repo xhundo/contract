@@ -36,7 +36,7 @@ contract SimpleStorage {
 
     People public person = People({ favoriteNumber: 9, name: "Kurtney"});
 
-    // an array of people objects 
+    // an array of people objects: //dynamic array size
     People[] public people;
 
     // 5 means this array can only have a length of 5. Fixed-Array size.
@@ -53,6 +53,7 @@ contract SimpleStorage {
     }
 
     // adding virtual specifier means method can be overridden
+    // _favoriteNumber (local var: naming convention)
     function store(uint256 _favoriteNumber) public virtual {
         favoriteNumber = _favoriteNumber;
         retrieve();
